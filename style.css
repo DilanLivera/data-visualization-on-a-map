@@ -9,17 +9,16 @@ path {
 }
 
 .tooltip {
-    opacity: 0;
-    position: absolute; /* the absolute positioning will let us control where the div shows up based on where we place our mouse */
-    pointer-events: none; /* tell the mouse to ignore the tooltip entirely so that the motion of the tooltip doesn't
-    cause the mouse out event to fire  */
-    background-color: #B6E7FB;
-    border: 2px solid #B6BEFB;
-    border-radius: 8px;
-    padding: 5px;
-  }
-  
-  .tooltip p {
-    margin: 0;
-  }
-  
+  opacity: 0;
+  position: absolute; /* the absolute positioning will let us control where the div shows up based on where we place our mouse */
+  pointer-events: none; /* tell the mouse to ignore the tooltip entirely so that the motion of the tooltip doesn't
+  cause the mouse out event to fire  */
+  background-color: #B6E7FB;
+  border: 2px solid #B6BEFB;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.tooltip p {
+  margin: 0;
+}

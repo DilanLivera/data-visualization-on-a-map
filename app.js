@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       function showTooltip(d) {
+        d3.select(d3.event.path).node()[0].style.strokeWidth = '1px'; // need to find a better way to do it
         tooltip
           .style("opacity", 1)
           .style("left", `${d3.event.x - tooltip.node().offsetWidth/2}px`) // set the left location based on x property of event
@@ -92,11 +93,12 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       
       function hideTooltip() {
+        d3.select(d3.event.path).node()[0].style.strokeWidth = '0.25px'; // need to find a better way to do it
         tooltip
           .style("opacity", 0);
       }
 
-      function setTooltipText(d) {
+      function setTooltipText(d) {                
         var value = select.property('value');
         var text = `<p>Country: ${d.properties.country}</p>`
         if(value === 'population') {
